@@ -1,2 +1,30 @@
-### SONGS INDEX
+### SONGS INDEX (simple get request)
 GET http://localhost:3000/songs.json
+
+### SONGS SHOW (get request but the url needs to ref the ID)
+GET http://localhost:3000/songs/1.json
+
+
+### SONGS CREATE (need to have a content type and parameters BUT NO TRAILING COMMA!)
+POST http://localhost:3000/songs.json
+Content-Type: application/json
+
+{
+  "title": "Rocky Mountain High",
+  "album": "Rocky Mountain High",
+  "artist": "John Denver",
+  "year": 1972
+}
+
+
+### SONGS UPDATE (same as above and the url needs to ref the ID)
+PATCH http://localhost:3000/songs/3.json
+Content-Type: application/json
+
+{
+  "title": "You Wild Colorado"
+}
+
+
+### SONGS DESTROY (and url needs to ref the ID)
+DELETE http://localhost:3000/songs/2.json
